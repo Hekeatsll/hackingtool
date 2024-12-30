@@ -124,6 +124,7 @@
 - [Bulk extractor](https://github.com/simsong/bulk_extractor)
 - [Disk Clone and ISO Image Acquire](https://guymager.sourceforge.io/)
 - [Toolsley](https://www.toolsley.com/)
+- [Volatility3](https://github.com/volatilityfoundation/volatility3/)
 ### Payload creation tools
 - [The FatRat](https://github.com/Screetsec/TheFatRat)
 - [Brutal](https://github.com/Screetsec/Brutal)
@@ -210,29 +211,64 @@
 
 ## Installation For Linux <img src="https://konpa.github.io/devicon/devicon.git/icons/linux/linux-original.svg" alt="linux" width="25" height="25"/></p><p align="center">
 
-#### This Tool Must Run As ROOT !!!
+
+### !! RUN HACKINGTOOL AS ROOT !! 
+
+
+## Steps are given below : 
+
+
+## Step : 1 Download hackingtool
 
     git clone https://github.com/Z4nzu/hackingtool.git
+
+## Step : 2 Give Permission to hackingtool
     
     chmod -R 755 hackingtool  
-    
+
+## Step : 3 Move to hackingtool directory
+
     cd hackingtool
+
+## Step : 4 Run hackingtool
     
     sudo bash install.sh
-    
+
+## Step : 5 For installing tools in directory
+
     sudo hackingtool
 
- After Following All Steps Just Type In Terminal **root@kaliLinux:~** **hackingtool**
 
 ## Use image with Docker
 
-### Run in one click
-`docker run -it vgpastor/hackingtool`
+### Create Docker Image
+- Create the docker image 
 
-### Build locally
-`docker-compose build`
+```bash
+docker buitl -t vgpastor/hackingtool .
+```
 
-`docker-compose run hackingtool`
+### Run as container 
+
+```bash
+docker-compose up -d
+```
+
+### Interact with terminal
+
+- Get into the container 
+```bash
+docker exec -it hackingtool bash
+```
+**OUTPUT:**
+```bash
+Select Best Option : 
+
+              [1] Kali Linux / Parrot-Os (apt)
+              [2] Arch Linux (pacman)
+              [0] Exit 
+```
+Enter the options and continue.
 
 - If need open other ports you can edit the docker-compose.yml file
 - Volumes are mounted in the container to persist data and can share files between the host and the container
